@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello1
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      # 这里就是镜像文件地址
+        #- image: docker.io/bystream/hello-py
+        - image: docker.io/abreaking/helloworld-go:latest
+          env:
+            - name: TARGET
+              value: "World"
