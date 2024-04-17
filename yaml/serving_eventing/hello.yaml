@@ -6,8 +6,7 @@ spec:
   template:
     spec:
       containers:
-        #- image: ghcr.io/knative/helloworld-go:latest
-        - image: docker.io/abreaking/helloworld-go:latest
+        - image: ghcr.io/knative/helloworld-go:latest
           ports:
             - containerPort: 8080
           env:
